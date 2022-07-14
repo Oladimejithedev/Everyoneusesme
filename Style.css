@@ -47,7 +47,80 @@ nav button:hover {
 }
 
 
+.hero{
+    padding: 20px 10%;
+    display: flex;
+    gap:20px ;
+}
 
+.hero :is(figure, .cta) 
+    {
+     flex: 1;
+    }
 
+.hero figure {
+    display: grid;
+    grid-template-columns: 1fr  1fr ;
+    gap: 10px;
+}
 
+.hero figure .image:hover{
+    animation: pulse.5s infinite alternate;
+}
+.hero figure .image{
+    background-color: #000;
+    height: 150px;
+    position: relative;
+    width: 200px;
+    justify-self: end;
+}
+figure .image:nth-child(2){
+    top:-20px;
+    justify-self: start;
+}
 
+figure .image:nth-child(4){
+    top:-20px;
+    justify-self: start;
+}
+
+.hero .cta{
+    padding: 0px 20px;
+}
+
+ h1{
+    font-size: 4rem;
+    color: #202020;
+}
+
+ h1 span{
+    background-color: #ffc400;
+    padding: 5px;
+}
+
+ p{
+    padding: 20px 0px;
+    font-size: 22px;
+    color: #000;
+}
+
+ button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: hwb(143 0% 0%);
+    color: white;
+    box-shadow: 0 2px;
+     cursor: pointer;
+}
+
+@keyframes pulse [
+    from{
+        transfrom:scale(1.1);
+        opacity: 0.7;
+    }
+    to{
+        transform: scale (1.1);
+        opacity: 0.7;
+    }
+]
